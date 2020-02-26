@@ -1,6 +1,6 @@
 {
     "name": "@hamworks/wp-block-filters",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "Hiroshi Urabe <urabe@ham.works> (https://ham.works)",
     "license": "GPL-3.0+",
     "main": "build/index.js",
@@ -18,8 +18,7 @@
         "build": "tsc && wp-scripts build",
         "lint": "wp-scripts lint-js --ext .js,.jsx,.ts,.tsx src/ --ignore-pattern 'src/@types/'"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
         "@babel/preset-typescript": "^7.8.3",
         "@types/wordpress__blocks": "^6.4.4",
