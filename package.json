@@ -1,0 +1,42 @@
+{
+    "name": "@hamworks/wp-block-filters",
+    "version": "0.0.0",
+    "author": "Hiroshi Urabe <urabe@ham.works> (https://ham.works)",
+    "license": "GPL-3.0+",
+    "main": "build/index.js",
+    "module": "build-module/index.js",
+    "types": "build-module/index.d.ts",
+    "repository": {
+        "url": "git@github.com:team-hamworks/wp-block-filters.git",
+        "type": "git"
+    },
+    "scripts": {
+        "tsc": "tsc",
+        "start": "tsc --watch & wp-scripts start",
+        "build": "tsc && wp-scripts build",
+        "lint": "wp-scripts lint-js --ext .js,.jsx,.ts,.tsx src/ --ignore-pattern 'src/@types/'"
+    },
+    "dependencies": {
+        "@types/wordpress__blocks": "^6.4.4",
+        "@types/wordpress__hooks": "^2.4.0",
+        "@wordpress/blocks": "^6.12.0"
+    },
+    "devDependencies": {
+        "@babel/preset-typescript": "^7.8.3",
+        "@typescript-eslint/eslint-plugin": "^2.21.0",
+        "@typescript-eslint/parser": "^2.21.0",
+        "@wordpress/browserslist-config": "2.6.0",
+        "@wordpress/eslint-plugin": "^4.0.0",
+        "@wordpress/scripts": "^7.1.2",
+        "prettier": "npm:wp-prettier@1.19.1",
+        "typescript": "^3.8.2"
+    },
+    "release-it": {
+        "hooks": {
+            "before:bump": "npm run build"
+        },
+        "npm": {
+            "publish": true
+        }
+    }
+}
