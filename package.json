@@ -12,17 +12,18 @@
     },
     "scripts": {
         "tsc": "tsc",
+        "test": "npm run test:unit",
+        "test:unit": "wp-scripts test-unit-js",
         "start": "tsc --watch & wp-scripts start",
         "build": "tsc && wp-scripts build",
         "lint": "wp-scripts lint-js --ext .js,.jsx,.ts,.tsx src/ --ignore-pattern 'src/@types/'"
     },
     "dependencies": {
-        "@types/wordpress__blocks": "^6.4.4",
-        "@types/wordpress__hooks": "^2.4.0",
-        "@wordpress/blocks": "^6.12.0"
+        "@types/wordpress__blocks": "^6.4.4"
     },
     "devDependencies": {
         "@babel/preset-typescript": "^7.8.3",
+        "@types/jest": "^25.1.3",
         "@typescript-eslint/eslint-plugin": "^2.21.0",
         "@typescript-eslint/parser": "^2.21.0",
         "@wordpress/browserslist-config": "2.6.0",

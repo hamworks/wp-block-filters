@@ -1,8 +1,8 @@
 import { BlockConfiguration, BlockAttribute } from '@wordpress/blocks';
 
-type MutableRequired< T > = { -readonly [ P in keyof T ]-?: T[ P ] };
-type BlockSettings = MutableRequired< BlockConfiguration >;
 type BlockAttributes = Record< string, BlockAttribute< any > >;
+type MutableRequired< T > = { -readonly [ P in keyof T ]-?: T[ P ] };
+export type BlockSettings = MutableRequired< BlockConfiguration >;
 
 type BlockFilter = (
 	blockName: string,
