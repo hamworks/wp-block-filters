@@ -1,11 +1,11 @@
-# @hamworks/wp-filters
+# @hamworks/wp-block-filters
 
 ## Installation
 
 Install the module
 
 ```bash
-npm install @hamworks/wp-filters --save
+npm install @hamworks/wp-block-filters --save
 ```
 
 ## API
@@ -29,7 +29,7 @@ React hooks for post meta.
 
 ```jsx
 import { addFilter } from '@wordpress/hooks';
-import { createAttributesFilter } from '@hamworks/wp-filters';
+import { createAttributesFilter } from '@hamworks/wp-block-filters';
 
 addFilter(
 	'blocks.registerBlockType',
